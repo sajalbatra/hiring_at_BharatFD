@@ -7,7 +7,6 @@ exports.createFAQ = async (req, res) => {
         const { question, answer } = req.body;
         
         const translations = await translationService.translateFAQ(req.body);
-        console.log("The trans is ",translations)
         const faq = new FAQ({ 
             question, 
             answer, 
